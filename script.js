@@ -1,5 +1,7 @@
 $(document).ready(function(){
-   $("#demo2").click(function(){
-       $("#demo").slideUp();
+   $("#demo").mouseenter(function(){
+       $("#demo").animate(
+           {fontSize: "60px", }
+       )
    })
 })

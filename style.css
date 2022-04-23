@@ -11,15 +11,23 @@ body{
 }
 
 h1{
+    margin: 20px;
     text-align: center;
-    font-size: 35px;
-    width: 200px;
+    font-size: 70px;
+    width: 250px;
 }
 
 .container{
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 150px;
+}
+
+.container-2{
+    display: flex;
+    justify-content: flex-start;
 }
 
 button{

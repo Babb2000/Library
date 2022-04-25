@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Tangerine', cursive;
+    font-family: 'Libre Bodoni', serif;
 }
 
 body{
@@ -16,6 +16,7 @@ h1{
     text-align: center;
     font-size: 70px;
     width: 250px;
+    text-shadow: 2px 2px silver;
 }
 
 
@@ -74,7 +75,7 @@ h1{
 
 /*Use multiple class selector*/
 #book1{
-    border: 1px solid black;
+    
     height: 120px;
     width: 120px;
     border-radius: 20px;
@@ -83,7 +84,7 @@ h1{
 }
 
 #book2{
-    border: 1px solid black;
+   
     height: 120px;
     width: 120px;
     border-radius: 20px;
@@ -92,7 +93,7 @@ h1{
 }
 
 #book3{
-    border: 1px solid black;
+    
     height: 120px;
     width: 120px;
     border-radius: 20px;
@@ -108,5 +109,31 @@ button{
 .booknum{
     font-size: 40px;
     font-family: 'Libre Bodoni', serif;
+}
+
+#getData{
+    width: 250px;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 20px;
+
+   
+}
+
+#headers{
+    width: 250px;
+    height: 50px;
+    font-family: 'Libre Bodoni', serif;
+    font-size: 30px;
+    text-shadow: 2px 2px silver;
+    
+}
+
+#formField{
+    width: 250px;
+    height: 452px;
+    display: flex;
+    justify-content: center;
+
 }
 

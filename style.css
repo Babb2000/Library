@@ -16,7 +16,6 @@ h1{
     text-align: center;
     font-size: 70px;
     width: 250px;
-    text-shadow: 2px 2px silver;
 }
 
 
@@ -101,10 +100,6 @@ h1{
     text-align: center;
 }
 
-button{
-    text-align: center;
-    color: yellow;
-}
 
 .booknum{
     font-size: 40px;
@@ -116,24 +111,49 @@ button{
     height: 100%;
     border: 1px solid black;
     border-radius: 20px;
+    background-color: #CCCCCC;
 
    
 }
 
 #headers{
+    position: relative;
+    
     width: 250px;
     height: 50px;
     font-family: 'Libre Bodoni', serif;
     font-size: 30px;
-    text-shadow: 2px 2px silver;
+    text-decoration: underline;
+
     
 }
 
-#formField{
-    width: 250px;
-    height: 452px;
+#newContainer{
     display: flex;
-    justify-content: center;
-
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
+
+button{
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+#buttonContainer{
+    width: 250px;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+/*Code to allign all the input feilds*/
+label{
+   display: flex;
+}
+
+input{
+    display: flex;
+}

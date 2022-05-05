@@ -21,26 +21,12 @@ $(document).ready(function(){
     }
 
 
-    //Function to replace divs
+   
     function replaceDivs(accNum){
 
-    let holder = document.getElementById('change1');
-      //let holder3 = document.getElementById('change1');
-      // let number = parseInt(holder);
- 
        let toSe = accNum.toString();
-       let textS = document.createTextNode(toSe)
-       console.log(textS);
+       document.getElementById('change1').innerText = toSe;
        
- 
-       let newDiv = document.createElement('div');
-       newDiv.appendChild(textS);
-       newDiv.style.fontSize = "40px";
-       newDiv.style.fontFamily = "'Libre Bodoni', serif";
- 
-       let holder2 = document.getElementById("book1");
-       holder2.removeChild(holder);
-       holder2.appendChild(newDiv);
     }
 
     //Function to change the display number each time a book is read

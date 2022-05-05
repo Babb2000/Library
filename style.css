@@ -61,6 +61,8 @@ h1{
     height: 500px;
     width: 900px;
     border-radius: 20px;
+
+    display: flex;
 }
 
 
@@ -172,4 +174,9 @@ input{
 
 #title{
     text-decoration: blink;
+}
+
+#displayBookShelf{
+    width: 652px;
+    height: 100%;
 }

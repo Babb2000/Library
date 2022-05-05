@@ -146,6 +146,13 @@ button{
     border-radius: 20px;
 }
 
+button:hover{
+    width: 100px;
+    height: 55px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px black;
+}
+
 #buttonContainer{
     width: 250px;
     height: 100%;

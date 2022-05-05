@@ -7,7 +7,7 @@ $(document).ready(function(){
  
     let myLibrary = []; //Array of objects to hold all the different types of books
 
-    function Bookshelf(title, author, numPages, read)
+    function Book(title, author, numPages, read)
     {
         this.title = title,
         this.author = author,
@@ -17,7 +17,7 @@ $(document).ready(function(){
 
 
     //Define functions on the prototype of the object
-    Bookshelf.prototype.info = function (){
+    Book.prototype.info = function (){
         return (`${title}, by ${author}, ${numPages} pages ${read}`);
     }
 
@@ -32,13 +32,15 @@ $(document).ready(function(){
             event.preventDefault();
 
             let titleVal = document.getElementById('title').value;
-            console.log(titleVal);
             let authorVal = document.getElementById('author').value;
-            console.log(authorVal);
             let numPages = parseInt(document.getElementById('pages').value);
-            console.log(numPages);
+            
+            formHolder.reset(); //Every time submit button is clicked reset the form
 
-            formHolder.reset();
+            let book1 = new Book(titleVal, authorVal, numPages);
+            myLibrary.push(book1);
+
+            console.log(myLibrary);
         })
     }
 

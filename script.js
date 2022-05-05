@@ -22,16 +22,27 @@ $(document).ready(function(){
     }
 
 
-    //Function to add book to library
-    
-    let butt = document.getElementById('theButton');
+    //Function to add book to Library
+    function addBookToLibrary()
+    {
+        let formHolder = document.getElementById('newContainer');
+        let butt = document.getElementById("buttonContainer");
 
-    butt.addEventListener("click", function(event){
+        butt.addEventListener("click", function(event){
+            event.preventDefault();
 
-        event.preventDefault();
-        let holder = document.getElementById("author").value;
-        console.log(holder);
-    })
+            let titleVal = document.getElementById('title').value;
+            console.log(titleVal);
+            let authorVal = document.getElementById('author').value;
+            console.log(authorVal);
+            let numPages = parseInt(document.getElementById('pages').value);
+            console.log(numPages);
+
+            formHolder.reset();
+        })
+    }
+
+    addBookToLibrary();
     
 
 });

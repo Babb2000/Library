@@ -2,6 +2,8 @@
 
  
 $(document).ready(function(){
+    
+    
     let accNum = 0;
  
     let myLibrary = []; 
@@ -22,33 +24,72 @@ $(document).ready(function(){
 
 
    
-    function replaceDivs(accNum){
+    function booksRead(accNum){
 
        let toSe = accNum.toString();
        document.getElementById('change1').innerText = toSe;
        
     }
 
+    function totalBooks(accNum){
+        let toSe = accNum.toString();
+        document.getElementById('change3').innerText = toSe;
+    }
+
     //Function to change the display number each time a book is read
     function addNumberRead(){
         accNum ++;
-       replaceDivs(accNum);
+       booksRead(accNum);
+       totalBooks(accNum);
         
     }
 
 
-     //Function to display each book added to the "database" to the website
+     //Function to loop through array of objects
      function displayBook(myLibrary)
      {
-          for(let key in myLibrary)
+          for(let prop in myLibrary)
           {
-              console.log(myLibrary[key]);
+              
+              let bookTitle = myLibrary[prop].title;
+              let bookAuthor = myLibrary[prop].author;
+              let bookPages = myLibrary[prop].numPages;
+
+              displayBookShelf(bookTitle, bookAuthor, bookPages);
           }
+
+          
      }
 
      
 
      //Function to create a div to display the books data
+
+     function displayBookShelf(title, author, numPages)
+     {
+
+        let strPages = numPages.toString();
+        let holder1 = document.getElementById('displayBookShelf');
+
+
+        let newDiv = document.createElement('div');
+        newDiv.style.height = "100px";
+        newDiv.style.width = "100px";
+        newDiv.style.borderRadius = "20px";
+        newDiv.style.border = "thick solid #000000";
+        newDiv.style.backgroundColor = "#CCCCCC";
+        newDiv.style.display = "flex";
+
+        let p1 = document.createTextNode(title);
+        let p2 = document.createTextNode(author);
+        let p3 = document.createTextNode(strPages);
+
+        newDiv.appendChild(p1);
+        newDiv.appendChild(p2);
+        newDiv.appendChild(p3);
+
+        holder1.appendChild(newDiv);
+     }
      
 
     //Function get input from user for each book and add it the myLibrary array

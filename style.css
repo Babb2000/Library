@@ -183,6 +183,7 @@ input{
     display: flex;
 }
 
+/*Everything below try to use javascript*/
 #practice{
     height: 200px;
     width: 150px;
@@ -191,11 +192,50 @@ input{
     border-radius: 20px;
 }
 
+#practice:hover{
+    box-shadow: 4px 4px 4px black;
+}
+
 #forTitle{
     border-radius: 20px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     background-color: rgba(71,173,150,255);
-    height: 45px;
+    height: 50.5px;
     border: 0.5 solid black;
+
+    display: flex;
+    justify-content: center;
+}
+
+#forAuthor{
+    
+    background-color: rgba(236,179,72,255);
+    height: 50.5px;
+    border: 0.5 solid black;
+
+    display: flex;
+    justify-content: center;
+}
+
+#forPages{
+    background-color: rgba(93,133,189,255);
+    height: 50.5px;
+    border: 0.5 solid black;
+
+    display: flex;
+    justify-content: center;
+}
+
+#readOrNot{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 50.5px;
+    border: 0.5 solid black;
+    background-color: silver;
+}
+
+.fixFont{
+    font-size: 12px;
+    
 }

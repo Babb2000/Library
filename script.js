@@ -66,7 +66,7 @@ $(document).ready(function(){
 
      //Function to create a div to display the books data
 
-     /*function displayBookShelf(title, author, numPages)
+       function displayBookShelf(title, author, numPages)
      {
 
         let strPages = numPages.toString();
@@ -77,34 +77,61 @@ $(document).ready(function(){
         let p2 = document.createTextNode(author);
         let p3 = document.createTextNode(strPages);
 
+        let titleText = document.createTextNode('Title: ');
+        let authorText = document.createTextNode('Author: ');
+        let numText = document.createTextNode('Number of Pages: ');
+
+        let para1 = document.createElement('p');
+        let para2 = document.createElement('p');
+        let para3 = document.createElement('p');
+
+        para1.appendChild(p1);
+        para2.appendChild(p2);
+        para3.appendChild(p3);
+
+        let newDiv6 = document.createElement('div');
+        newDiv6.classList.add('fixFont');
+        newDiv6.appendChild(titleText);
+        newDiv6.appendChild(para1);
+
+        let newDiv7 = document.createElement('div');
+        newDiv7.classList.add('fixFont');
+        newDiv7.appendChild(authorText);
+        newDiv7.appendChild(para2);
+
+
+        let newDiv8 = document.createElement('div');
+        newDiv8.classList.add('fixFont');
+        newDiv8.appendChild(numText);
+        newDiv8.appendChild(para3);
+
+        
+
+
         let newDiv = document.createElement('div');
-        newDiv.style.height = "200px";
-        newDiv.style.width = "150px";
-        newDiv.style.borderRadius = "20px";
-        newDiv.style.border = "1px solid #000000";
-        newDiv.style.backgroundColor = "#CCCCCC";
-        newDiv.style.display = "flex";
-        newDiv.style.justifyContent = "center"
-        newDiv.style.gap = "10px";
-        newDiv.style.margin = "5px";
+        newDiv.setAttribute("id", "practice");
+        
 
         let newDiv2 = document.createElement('div');
+        newDiv2.setAttribute("id", "forTitle");
+        newDiv2.appendChild(newDiv6);
+
         let newDiv3 = document.createElement('div');
+        newDiv3.setAttribute("id", "forAuthor");
+        newDiv3.appendChild(newDiv7);
+
         let newDiv4 = document.createElement('div');
+        newDiv4.setAttribute("id", "forPages");
+        newDiv4.appendChild(newDiv8);
 
-        newDiv2.style.width = "auto";
-        newDiv2.style.height = "44.25";
-        newDiv2.style.borderRadius = "20px";
-        newDiv2.style.display = "flex";
-        newDiv2.style.backgroundColor = "rgb(169,169,169)";
-        newDiv2.style.fontSize = "14px";
+        let newDiv5 = document.createElement('div');
+        newDiv5.setAttribute("id", "readOrNot");
 
-        newDiv2.appendChild(p1);
-
-        newDiv.appendChild(newDiv2);
+        
+       newDiv.append(newDiv2, newDiv3, newDiv4, newDiv5);
 
         holder1.appendChild(newDiv);
-     }*/
+     }
      
 
     //Function get input from user for each book and add it the myLibrary array

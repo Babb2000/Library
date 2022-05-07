@@ -182,13 +182,14 @@ input{
 }
 
 /*Everything below try to use javascript*/
-#practice{
+
+/*#practice{
     height: 200px;
     width: 150px;
     border: 1px solid black;
     margin: 8px;
     border-radius: 20px;
-}
+}*/
 
 #practice:hover{
     box-shadow: 0px 0px 4px 4px black;

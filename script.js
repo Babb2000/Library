@@ -5,6 +5,7 @@ $(document).ready(function(){
     
     
     let accNum = 0;
+    let counterID= 0;
  
     let myLibrary = []; 
 
@@ -68,7 +69,9 @@ $(document).ready(function(){
 
        function displayBookShelf(title, author, numPages)
      {
-
+        counterID++;
+        let toStrId = counterID.toString();
+        
         let strPages = numPages.toString();
         let holder1 = document.getElementById('displayBookShelf');
 
@@ -116,8 +119,14 @@ $(document).ready(function(){
 
 
         let newDiv = document.createElement('div');
-        newDiv.setAttribute("id", "practice");
-        
+        newDiv.setAttribute("id", "practice" + toStrId);
+        let forJ = "practice" + toStrId;
+        newDiv.style.height = "200px";
+        newDiv.style.width = "150px";
+        newDiv.style.border = "1px solid black";
+        newDiv.style.margin = "8px";
+        newDiv.style.borderRadius = "20px";
+
 
         let newDiv2 = document.createElement('div');
         newDiv2.setAttribute("id", "forTitle");
@@ -140,23 +149,12 @@ $(document).ready(function(){
 
         holder1.appendChild(newDiv);
 
-       removeABook();
     }
      
 
-    function removeABook()
-    {
-     
-    $("#buttonRemove").click(function(){
-        $("#practice").slideUp();
-    })
+  
 
-
-
-
-
-
-    }
+    
 
     //Function get input from user for each book and add it the myLibrary array
     function addBookToLibrary()

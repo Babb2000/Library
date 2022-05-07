@@ -52,7 +52,7 @@ $(document).ready(function(){
         let holdingtheId = document.getElementById(theId);
 
         holdingtheId.addEventListener("click", function(e){
-           e.currentTarget.parentElement.parentElement.parentElement.parentElement.remove();
+           e.currentTarget.parentElement.parentElement.parentElement.remove();
         })
         
     }

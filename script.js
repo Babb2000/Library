@@ -52,7 +52,7 @@ $(document).ready(function(){
         let holdingtheId = document.getElementById(theId);
 
         holdingtheId.addEventListener("click", function(e){
-            console.log(e.currentTarget.id);
+           e.currentTarget.parentElement.parentElement.parentElement.parentElement.remove();
         })
         
     }
@@ -163,12 +163,9 @@ function displayBookShelf(title, author, numPages)
             {
               
                 let bookTitle = myLibrary[prop].title;
-                console.log(bookTitle);
                 let bookAuthor = myLibrary[prop].author;
-                console.log(bookAuthor);
                 let bookPages = myLibrary[prop].numPages;
-                console.log(bookPages);
-  
+            
                 displayBookShelf(bookTitle, bookAuthor, bookPages);
                 myLibrary.pop();//Remove last object in array after data is sent 
             }

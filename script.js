@@ -56,6 +56,7 @@ $(document).ready(function(){
               let bookPages = myLibrary[prop].numPages;
 
               displayBookShelf(bookTitle, bookAuthor, bookPages);
+              myLibrary.pop();//Remove last object in array after data is sent 
           }
 
           

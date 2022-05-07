@@ -75,9 +75,6 @@ h1{
     box-shadow: 10px 5px 5px black;
 }
 
-#getData:hover{
-    box-shadow: 10px 5px 5px black;
-}
 
 /*Use multiple class selector*/
 #book1{
@@ -181,6 +178,7 @@ input{
     height: 100%;
 
     display: flex;
+    flex-wrap: wrap;
 }
 
 /*Everything below try to use javascript*/
@@ -193,7 +191,7 @@ input{
 }
 
 #practice:hover{
-    box-shadow: 4px 4px 4px black;
+    box-shadow: 0px 0px 4px 4px black;
 }
 
 #forTitle{

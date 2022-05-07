@@ -76,6 +76,7 @@ $(document).ready(function(){
         let p1 = document.createTextNode(title);
         let p2 = document.createTextNode(author);
         let p3 = document.createTextNode(strPages);
+        let p4 = document.createTextNode('Remove a book');
 
         let titleText = document.createTextNode('Title: ');
         let authorText = document.createTextNode('Author: ');
@@ -84,10 +85,13 @@ $(document).ready(function(){
         let para1 = document.createElement('p');
         let para2 = document.createElement('p');
         let para3 = document.createElement('p');
+        let button1 = document.createElement('button');
+        button1.setAttribute('id', "buttonRemove");
 
         para1.appendChild(p1);
         para2.appendChild(p2);
         para3.appendChild(p3);
+        button1.appendChild(p4);
 
         let newDiv6 = document.createElement('div');
         newDiv6.classList.add('fixFont');
@@ -105,6 +109,9 @@ $(document).ready(function(){
         newDiv8.appendChild(numText);
         newDiv8.appendChild(para3);
 
+        let newDiv9 = document.createElement('div');
+        newDiv9.setAttribute("id", "fordivButton");
+        newDiv9.appendChild(button1);
         
 
 
@@ -126,13 +133,30 @@ $(document).ready(function(){
 
         let newDiv5 = document.createElement('div');
         newDiv5.setAttribute("id", "readOrNot");
+        newDiv5.appendChild(newDiv9);
 
         
        newDiv.append(newDiv2, newDiv3, newDiv4, newDiv5);
 
         holder1.appendChild(newDiv);
-     }
+
+       removeABook();
+    }
      
+
+    function removeABook()
+    {
+     
+    $("#buttonRemove").click(function(){
+        $("#practice").slideUp();
+    })
+
+
+
+
+
+
+    }
 
     //Function get input from user for each book and add it the myLibrary array
     function addBookToLibrary()
@@ -158,13 +182,10 @@ $(document).ready(function(){
     }
 
     
-
-
     addBookToLibrary();
  
-
-
-
+    
+   
 
 
 

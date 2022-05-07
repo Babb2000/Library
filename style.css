@@ -231,9 +231,25 @@ input{
     height: 50.5px;
     border: 0.5 solid black;
     background-color: silver;
+
+    display: flex;
+    justify-content: center;
+    align-self: center;
 }
 
 .fixFont{
     font-size: 12px;
     
 }
+
+#fordivButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttonRemove{
+    height: 30.5px;
+    
+}
+

@@ -47,6 +47,16 @@ $(document).ready(function(){
     }
 
 
+    function removeABook(theId)
+    {
+        let holdingtheId = document.getElementById(theId);
+
+        holdingtheId.addEventListener("click", function(e){
+            console.log(e.currentTarget.id);
+        })
+        
+    }
+
 //Function to create a div to display the books data
 
 function displayBookShelf(title, author, numPages)
@@ -132,19 +142,13 @@ function displayBookShelf(title, author, numPages)
 
    holder1.appendChild(newDiv);
 
-   for(let i = 1; i <= holderMyLibrary.length; i++)
-   {
-       
-       let holdingtheId = document.getElementById('buttonRemove' + i);
-       console.log(holdingtheId);
-       holdingtheId.addEventListener("click", function(e){
-           if(e.currentTarget.id == holdingtheId)
-           {
-               console.log(e.currentTarget.id);
-               alert("you got it");
-           }
-       })
-   }
+       for(let i = 1; i <= holderMyLibrary.length; i++)
+       {
+           let holdingtheId = document.getElementById('buttonRemove' + i);
+           removeABook(holdingtheId.id);
+       }
+        
+
    
 }
     

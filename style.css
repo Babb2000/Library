@@ -179,4 +179,13 @@ input{
 #displayBookShelf{
     width: 652px;
     height: 100%;
+
+    display: flex;
+}
+
+.practice{
+    height: 200px;
+    width: 150px;
+    border: 1px solid black;
+    margin: 5px;
 }

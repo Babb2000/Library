@@ -66,31 +66,45 @@ $(document).ready(function(){
 
      //Function to create a div to display the books data
 
-     function displayBookShelf(title, author, numPages)
+     /*function displayBookShelf(title, author, numPages)
      {
 
         let strPages = numPages.toString();
         let holder1 = document.getElementById('displayBookShelf');
 
 
-        let newDiv = document.createElement('div');
-        newDiv.style.height = "100px";
-        newDiv.style.width = "100px";
-        newDiv.style.borderRadius = "20px";
-        newDiv.style.border = "thick solid #000000";
-        newDiv.style.backgroundColor = "#CCCCCC";
-        newDiv.style.display = "flex";
-
         let p1 = document.createTextNode(title);
         let p2 = document.createTextNode(author);
         let p3 = document.createTextNode(strPages);
 
-        newDiv.appendChild(p1);
-        newDiv.appendChild(p2);
-        newDiv.appendChild(p3);
+        let newDiv = document.createElement('div');
+        newDiv.style.height = "200px";
+        newDiv.style.width = "150px";
+        newDiv.style.borderRadius = "20px";
+        newDiv.style.border = "1px solid #000000";
+        newDiv.style.backgroundColor = "#CCCCCC";
+        newDiv.style.display = "flex";
+        newDiv.style.justifyContent = "center"
+        newDiv.style.gap = "10px";
+        newDiv.style.margin = "5px";
+
+        let newDiv2 = document.createElement('div');
+        let newDiv3 = document.createElement('div');
+        let newDiv4 = document.createElement('div');
+
+        newDiv2.style.width = "auto";
+        newDiv2.style.height = "44.25";
+        newDiv2.style.borderRadius = "20px";
+        newDiv2.style.display = "flex";
+        newDiv2.style.backgroundColor = "rgb(169,169,169)";
+        newDiv2.style.fontSize = "14px";
+
+        newDiv2.appendChild(p1);
+
+        newDiv.appendChild(newDiv2);
 
         holder1.appendChild(newDiv);
-     }
+     }*/
      
 
     //Function get input from user for each book and add it the myLibrary array

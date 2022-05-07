@@ -183,9 +183,19 @@ input{
     display: flex;
 }
 
-.practice{
+#practice{
     height: 200px;
     width: 150px;
     border: 1px solid black;
-    margin: 5px;
+    margin: 8px;
+    border-radius: 20px;
+}
+
+#forTitle{
+    border-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: rgba(71,173,150,255);
+    height: 45px;
+    border: 0.5 solid black;
 }

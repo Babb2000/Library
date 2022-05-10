@@ -5,6 +5,7 @@ $(document).ready(function(){
     
     
     let accNum = 0;
+    let accNumSub = 0;
     let counterID= 0;
     let holderMyLibrary = []; //Array to hold object
  
@@ -25,6 +26,11 @@ $(document).ready(function(){
     }
 
 
+    function booksUnread(accNumSub)
+    {
+        let toSe = accNumSub.toString();
+        document.getElementById('change2').innerText = toSe;
+    }
    
     function booksRead(accNum){
 
@@ -46,9 +52,16 @@ $(document).ready(function(){
         
     }
 
+    function subNumberRead(){
+        accNumSub++;
+        booksUnread(accNumSub);
+        accNum--;
+    }
+
 
     function removeABook(theId)
     {
+        
         let holdingtheId = document.getElementById(theId);
 
         holdingtheId.addEventListener("click", function(e){
@@ -151,7 +164,7 @@ function displayBookShelf(title, author, numPages)
 
    
 }
-    
+
 
     //Function to loop through array of objects
      function displayBook(myLibrary)
@@ -239,8 +252,3 @@ function displayBookShelf(title, author, numPages)
     
 
 });
-
-  
-
-
-

@@ -1,5 +1,4 @@
 
-
  
 $(document).ready(function(){
     
@@ -57,18 +56,20 @@ $(document).ready(function(){
         booksUnread(accNumSub);
         accNum--;
     }
-
-
     function removeABook(theId)
     {
         
         let holdingtheId = document.getElementById(theId);
 
-        holdingtheId.addEventListener("click", function(e){
-           e.currentTarget.parentElement.parentElement.parentElement.remove();
-        })
+        
+            holdingtheId.addEventListener("click", function(e){
+            e.currentTarget.parentElement.parentElement.parentElement.remove();
+            subNumberRead();
+            })
         
     }
+
+ 
 
 //Function to create a div to display the books data
 
@@ -155,10 +156,15 @@ function displayBookShelf(title, author, numPages)
 
    holder1.appendChild(newDiv);
 
+   
        for(let i = 1; i <= holderMyLibrary.length; i++)
        {
-           let holdingtheId = document.getElementById('buttonRemove' + i);
-           removeABook(holdingtheId.id);
+            
+            let holdingtheId = document.getElementById('buttonRemove' + i);
+            if(holdingtheId.clicked == true);
+            {
+               removeABook(holdingtheId.id);
+            }
        }
         
 

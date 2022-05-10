@@ -16,3 +16,5 @@ The javascript I wrote gathered the user entered data from the form field, parse
 3. Use some jQuery methods to fadeOut divs when the user clicks "Remove a book"
 
 Check it Out Live Here: :airplane: https://babb2000.github.io/Library/
+
+![Screenshot of Page](Test_Screenshot.png "Library")

@@ -10,7 +10,7 @@ $(document).ready(function(){
  
     let myLibrary = []; 
 
-    function Book(title, author, numPages, read)
+    function Book(title, author, numPages, read) //Constructor to instantiate book instances
     {
         this.title = title,
         this.author = author,
@@ -43,13 +43,7 @@ $(document).ready(function(){
         document.getElementById('change3').innerText = toSe;
     }
 
-    //Function to change the display number each time a book is read
-    function addNumberRead(){
-        accNum ++;
-       booksRead(accNum);
-       totalBooks(accNum);
-        
-    }
+
 
     function subNumberRead(){
         accNumSub++;
@@ -58,7 +52,6 @@ $(document).ready(function(){
     }
     function removeABook(theId)
     {
-        
         let holdingtheId = document.getElementById(theId);
 
         
@@ -69,6 +62,28 @@ $(document).ready(function(){
         
     }
 
+      /*Create a function that keeps track of the numnber of elements within the main array that hold the number of books read. Then
+          Then each time a book is added or removed update the live count screen*/
+        
+      function liveCount(toggleBook){
+
+        //Use a switchstatement to figure out which function to run
+        switch(toggleBook){
+          case "add":
+            (function addNumberRead(){
+                accNum ++;
+               booksRead(accNum);
+               totalBooks(accNum);
+            })();
+          break;
+
+
+
+
+
+
+        }
+      }
  
 
 //Function to create a div to display the books data
@@ -161,6 +176,7 @@ function displayBookShelf(title, author, numPages)
        {
             
             let holdingtheId = document.getElementById('buttonRemove' + i);
+            
             if(holdingtheId.clicked == true);
             {
                removeABook(holdingtheId.id);
@@ -177,6 +193,7 @@ function displayBookShelf(title, author, numPages)
      {
          let holderA = myLibrary.slice();
           holderMyLibrary.push(holderA);
+          console.log(holderMyLibrary);
 
             for(let prop in myLibrary)
             {
@@ -212,7 +229,10 @@ function displayBookShelf(title, author, numPages)
             myLibrary.push(book1);
             
             displayBook(myLibrary);
-            addNumberRead();
+
+            let add;
+            liveCount(add);
+
         })
     }
 

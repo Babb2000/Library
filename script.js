@@ -29,17 +29,17 @@ $(document).ready(function(){
     {
         let toSe = accNumSub.toString();
         document.getElementById('change2').innerText = toSe;
+    
     }
    
-    function booksRead(accNum){
-        accNum++
-       let toSe = accNum.toString();
-       document.getElementById('change1').innerText = toSe;
-       
+    function booksRead(){
+        let holder = displayChildElements();
+        document.getElementById('change1').innerText = holder;
     }
 
     function totalBooks(){
         let holder = displayChildElements();
+        console.log(holder);
         document.getElementById('change3').innerText = holder;
     }
 
@@ -52,6 +52,7 @@ $(document).ready(function(){
     }
     function removeABook(theId)
     {
+        totalBooks();
         let holdingtheId = document.getElementById(theId);
 
         

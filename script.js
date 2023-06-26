@@ -32,15 +32,15 @@ $(document).ready(function(){
     }
    
     function booksRead(accNum){
-
+        accNum++
        let toSe = accNum.toString();
        document.getElementById('change1').innerText = toSe;
        
     }
 
-    function totalBooks(accNum){
-        let toSe = accNum.toString();
-        document.getElementById('change3').innerText = toSe;
+    function totalBooks(){
+        let holder = displayChildElements();
+        document.getElementById('change3').innerText = holder;
     }
 
 
@@ -62,29 +62,6 @@ $(document).ready(function(){
         
     }
 
-      /*Create a function that keeps track of the numnber of elements within the main array that hold the number of books read. Then
-          Then each time a book is added or removed update the live count screen*/
-        
-      function liveCount(toggleBook){
-
-        //Use a switchstatement to figure out which function to run
-        switch(toggleBook){
-          case "add":
-            (function addNumberRead(){
-                accNum ++;
-               booksRead(accNum);
-               totalBooks(accNum);
-            })();
-          break;
-
-
-
-
-
-
-        }
-      }
- 
 
 //Function to create a div to display the books data
 
@@ -183,7 +160,7 @@ function displayBookShelf(title, author, numPages)
             }
        }
         
-
+       totalBooks();
    
 }
 
@@ -229,16 +206,17 @@ function displayBookShelf(title, author, numPages)
             myLibrary.push(book1);
             
             displayBook(myLibrary);
-
-            let add;
-            liveCount(add);
-
+            booksRead();
         })
     }
 
+    function displayChildElements(){
+        let number = document.getElementById('displayBookShelf').childElementCount;
+        return number;
+    }
     
     addBookToLibrary();
-   
+  
     
    
 

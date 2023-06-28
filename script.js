@@ -25,11 +25,13 @@ $(document).ready(function(){
     }
 
 
-    function booksUnread(accNumSub)
+    function booksUnread(holder)
     {
-        let toSe = accNumSub.toString();
-        document.getElementById('change2').innerText = toSe;
-    
+        let num = (holder - (holder - 1));
+
+        accNum += num;
+        document.getElementById('change2').innerText = accNum;
+        
     }
    
     function booksRead(){
@@ -39,15 +41,14 @@ $(document).ready(function(){
 
     function totalBooks(){
         let holder = displayChildElements();
-        console.log(holder);
         document.getElementById('change3').innerText = holder;
     }
 
 
 
     function subNumberRead(){
-        accNumSub++;
-        booksUnread(accNumSub);
+        let holder = displayChildElements();
+        booksUnread(holder);
         accNum--;
     }
     function removeABook(theId)
@@ -171,8 +172,7 @@ function displayBookShelf(title, author, numPages)
      {
          let holderA = myLibrary.slice();
           holderMyLibrary.push(holderA);
-          console.log(holderMyLibrary);
-
+          
             for(let prop in myLibrary)
             {
               

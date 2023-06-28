@@ -25,12 +25,11 @@ $(document).ready(function(){
     }
 
 
-    function booksUnread(holder)
+    function booksUnread()
     {
-        let num = (holder - (holder - 1));
-
-        accNum += num;
+        accNum++;
         document.getElementById('change2').innerText = accNum;
+        console.log(accNum);
         
     }
    
@@ -49,8 +48,10 @@ $(document).ready(function(){
     function subNumberRead(){
         let holder = displayChildElements();
         booksUnread(holder);
-        accNum--;
+        
     }
+
+
     function removeABook(theId)
     {
         totalBooks();
@@ -151,20 +152,26 @@ function displayBookShelf(title, author, numPages)
    holder1.appendChild(newDiv);
 
    
-       for(let i = 1; i <= holderMyLibrary.length; i++)
-       {
-            
-            let holdingtheId = document.getElementById('buttonRemove' + i);
-            
-            if(holdingtheId.clicked == true);
-            {
-               removeABook(holdingtheId.id);
-            }
-       }
-        
+      checkIfBookRemoved();
        totalBooks();
-   
 }
+
+    function checkIfBookRemoved(){
+        
+        for(let i = 1; i <= holderMyLibrary.length; i++)
+        {
+             
+             let holdingtheId = document.getElementById('buttonRemove' + i);
+             
+             if(holdingtheId.clicked == true);
+             {
+                removeABook(holdingtheId.id);
+
+             }
+        }
+
+        return;
+    }
 
 
     //Function to loop through array of objects

@@ -151,28 +151,21 @@ function displayBookShelf(title, author, numPages)
 
    holder1.appendChild(newDiv);
 
-   
-      checkIfBookRemoved();
-       totalBooks();
-}
 
-    function checkIfBookRemoved(){
-        
-        for(let i = 1; i <= holderMyLibrary.length; i++)
+   for(let i = 1; i <= holderMyLibrary.length; i++)
+   {
+
+        let holdingtheId = document.getElementById('buttonRemove' + i);
+
+        if(holdingtheId.clicked == true);
         {
-             
-             let holdingtheId = document.getElementById('buttonRemove' + i);
-             
-             if(holdingtheId.clicked == true);
-             {
-                removeABook(holdingtheId.id);
-
-             }
+           removeABook(holdingtheId.id);
         }
+   }
+    
 
-        return;
-    }
-
+    totalBooks();
+}
 
     //Function to loop through array of objects
      function displayBook(myLibrary)
@@ -224,7 +217,6 @@ function displayBookShelf(title, author, numPages)
     }
     
     addBookToLibrary();
-  
     
    
 

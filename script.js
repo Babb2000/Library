@@ -152,9 +152,8 @@ function displayBookShelf(title, author, numPages)
    holder1.appendChild(newDiv);
 
 
-   
-    
-    //checkRemovedStatus();
+ 
+    checkRemovedStatus();
     totalBooks();
 }
 
@@ -207,7 +206,8 @@ function displayBookShelf(title, author, numPages)
         return number;
     }
     
-    /*function checkRemovedStatus(){
+      
+     function checkRemovedStatus(){
         
         for(let i = 1; i <= holderMyLibrary.length; i++)
          {
@@ -219,7 +219,8 @@ function displayBookShelf(title, author, numPages)
             removeABook(holdingtheId.id);
             }
         }
-    }*/
+    }
+
     addBookToLibrary();
     
    

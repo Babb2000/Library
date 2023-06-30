@@ -28,7 +28,7 @@ $(document).ready(function(){
     function booksUnread()
     {
         accNum++;
-        document.getElementById('change2').innerText = accNum;
+        document.getElementById('change2').innerText = accNumSub;
         console.log(accNum);
         
     }
@@ -152,18 +152,9 @@ function displayBookShelf(title, author, numPages)
    holder1.appendChild(newDiv);
 
 
-   for(let i = 1; i <= holderMyLibrary.length; i++)
-   {
-
-        let holdingtheId = document.getElementById('buttonRemove' + i);
-
-        if(holdingtheId.clicked == true);
-        {
-           removeABook(holdingtheId.id);
-        }
-   }
+   
     
-
+    //checkRemovedStatus();
     totalBooks();
 }
 
@@ -216,6 +207,19 @@ function displayBookShelf(title, author, numPages)
         return number;
     }
     
+    /*function checkRemovedStatus(){
+        
+        for(let i = 1; i <= holderMyLibrary.length; i++)
+         {
+
+        let holdingtheId = document.getElementById('buttonRemove' + i);
+
+            if(holdingtheId.clicked == true);
+            {
+            removeABook(holdingtheId.id);
+            }
+        }
+    }*/
     addBookToLibrary();
     
    

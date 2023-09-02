@@ -10,13 +10,15 @@ $(document).ready(function(){
  
     let myLibrary = []; 
 
-    function Book(title, author, numPages, read) //Constructor to instantiate book instances
-    {
-        this.title = title,
-        this.author = author,
-        this.numPages = numPages,
-        this.read = read;
+    class Book{
+        constructor(title, author, numPages, read){
+            this.title = title;
+            this.author = author;
+            this.numPages = numPages;
+            this.read = read;
+        }
     }
+
 
 
     //Define functions on the prototype of the object

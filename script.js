@@ -21,6 +21,7 @@ $(document).ready(function(){
 
 
 
+
     //Define functions on the prototype of the object
     Book.prototype.info = function (){
         return (`${title}, by ${author}, ${numPages} pages ${read}`);

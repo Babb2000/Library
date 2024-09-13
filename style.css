@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Libre Bodoni', serif;
+    box-sizing: border-box;
 }
 
 body{
@@ -40,15 +41,13 @@ h1{
     
 }
 
-.container-4{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
 
-/*Use multiple class selector*/
 .section-1{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+
    border: 1px solid black;
    height: 500px;
    width: 250px;
@@ -112,7 +111,10 @@ h1{
 }
 
 #getData{
-    width: 250px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 290px;
     height: 100%;
     border: 1px solid black;
     border-radius: 20px;

@@ -6,6 +6,7 @@
 }
 
 body{
+   margin-bottom: 50px;
    min-height: 100vh;
    height: 1087;
    background: rgb(238,238,238);
@@ -38,7 +39,10 @@ h1{
     display: none;
     display: flex;
     justify-content: space-around;
-    
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    height: 100%;
+    overflow: scroll;
 }
 
 

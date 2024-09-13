@@ -124,29 +124,33 @@ function displayBookShelf(title, author, numPages)
 
    let newDiv = document.createElement('div');
    newDiv.setAttribute("id", "practice" + strcounterId);
-   newDiv.style.height = "200px";
+   newDiv.style.height = "fit-content";
    newDiv.style.width = "150px";
    newDiv.style.border = "1px solid #000000";
    newDiv.style.margin = "8px";
    newDiv.style.borderRadius = "20px";
 
+   /* Title Containing Div Element */
    let newDiv2 = document.createElement('div');
    newDiv2.setAttribute("id", "forTitle");
    newDiv2.appendChild(newDiv6);
 
+   /* Author Containing Div Element */
    let newDiv3 = document.createElement('div');
    newDiv3.setAttribute("id", "forAuthor");
    newDiv3.appendChild(newDiv7);
 
+   /* Number of Pages Containing Div Element */
    let newDiv4 = document.createElement('div');
    newDiv4.setAttribute("id", "forPages");
    newDiv4.appendChild(newDiv8);
 
+   /* Title Containing Div Element */
    let newDiv5 = document.createElement('div');
    newDiv5.setAttribute("id", "readOrNot");
    newDiv5.appendChild(newDiv9);
 
-   
+  
   newDiv.append(newDiv2, newDiv3, newDiv4, newDiv5);
 
    holder1.appendChild(newDiv);
